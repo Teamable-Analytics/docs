@@ -68,7 +68,7 @@ Now we're ready to set up the data. There are a few types:
 If you're using a course that has been used for a demo before, then the data setup might have been completed already.
 Be sure to remove extraneous DB 
 
-#### Student Data
+#### Step 3.1: Student Data
 
 The student data comes from Canvas/CanvasTest and is completed by clicking the "Import Course Data" button in
 `<COURSE_ID>/sections`. As long as the data exists in the connected Canvas instance, this will work
@@ -80,7 +80,7 @@ can plan in advance), but this refresh cannot be manually triggered.
 > **Note:** Student accounts cannot log in to CanvasTest at all. So peer evaluations and surveys cannot be mock-completed in
 > CanvasTest/`ta-verf`.
 
-#### Assignment Data
+#### Step 3.2: Assignment Data
 
 In order to demonstrate the "Monitor Teams" functionality, assignment grades are needed. This means creating
 assignments/quizzes in CanvasTest and giving each student a grade in the gradebook for them.
@@ -89,7 +89,7 @@ The easiest way I could do this was to make a "Graded Quiz" with 1 question that
 number of total marks for an essay question, so choose a number that makes sense. Then go to the gradebook and give each
 student a mark. (To be extra thorough, I generated a set of normally distributed integers of the class size)
 
-#### Survey Data
+#### Step 3.3: Survey Data
 
 1. Create attributes.
     1. Import one of each attribute bank attributes.
@@ -105,7 +105,7 @@ student a mark. (To be extra thorough, I generated a set of normally distributed
    > Any settings here are fine. Creating this based on the created project set is a good idea, but you could just set
    > a hardcoded number of teams.
 
-#### Peer Evaluation Data
+#### Step 3.4: Peer Evaluation Data
 
 1. Create peer evaluation attributes.
    > Create one of each type, each made to make sense.
