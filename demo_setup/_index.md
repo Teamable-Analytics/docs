@@ -66,7 +66,7 @@ The student data comes from Canvas/CanvasTest and is completed by clicking the "
 Remember that CanvasTest refreshes with the data from Canvas monthly on pre-assigned dates that CTLT will know (so we 
 can plan in advance), but this refresh cannot be manually triggered.
 
-> Note: Student accounts cannot log in to CanvasTest at all. So peer evaluations and surveys cannot be mock-completed in
+> **Note:** Student accounts cannot log in to CanvasTest at all. So peer evaluations and surveys cannot be mock-completed in
 > CanvasTest/`ta-verf`.
 
 #### Assignment Data
@@ -78,10 +78,33 @@ number of total marks for an essay question, so choose a number that makes sense
 student a mark. (To be extra thorough, I generated a set of normally distributed integers of the class size)
 
 #### Survey Data
+1. Create attributes.
+    1. Import one of each attribute bank attributes.
+    2. Perhaps make an extra 1 or 2 so you can make meaningful project requirements later.
+   3. Create a project preference attribute based on a project set you prepared earlier.
+      > The project set should have a few projects that make sense, with corresponding requirements that make sense. 
+       Set the number of teams that can work on each project so that they add up to a total number of teams in the 
+       project set is a desirable number.
+2. Create a survey from all of these attributes. The order isn't important, but ideally the order should make sense.
+3. Publish this survey and preview it on Canvas.
+4. Create randomized fake responses.
+    > Someone with superuser access to the application needs to go to `/<COURSE_ID>/surveys` and click the dark, 
+   > orange-outlined, button next to the survey to generate random responses for that survey.
+5. Create a WeightAlgorithm group set using this survey data.
+   > Any settings here are fine. Creating this based on the created project set is a good idea, but you could just set
+   > a hardcoded number of teams.
 
 #### Peer Evaluation Data
+1. Create peer evaluation attributes.
+   > Create one of each type, each made to make sense.
+2. Create a peer evaluation with these attributes.
+   > The group set selected for this doesn't *have* to be the group set you published 
+   1. Start date should be current date or earlier, close date should be after the demo date.
+   2. Set feedback to be viewable, but make one of the attributes have no feedback available.
+3. Preview as a few students to ensure things work as intended.
 
 ### Step 4: Test run.
-
+Run through the [Example Demo Guide](exmaple-demo-steps.md).
 
 ### Step 5: Complete demo.
+Run through the [Example Demo Guide](exmaple-demo-steps.md) again, with any modifications you need to make.
