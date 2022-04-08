@@ -74,11 +74,13 @@ Once you have these, you proceed with the steps below to set up the project.
        > Generate a new access token. You may want to write this down somewhere private and keep a record of it.
 
 
-10. Navigate to `localhost:8000` in your browser and log in with `username=123` and `password=password` to log into the
-    sandbox course.
+10. Navigate to `localhost:8000` in your browser and log in with the following credentials:
+    > Username: `123` \
+    Password: `password`
 
 
-11. Use the interface to import course data.
+11. Navigate to `localhost:8000/courses/31084/sections` and use the interface to import course data.
+
 > This should work as long as you are added with the correct user permissions to the sandbox course (`id=31084`), and your Canvas access token has been set up correctly.
 
 ## Optional Steps
