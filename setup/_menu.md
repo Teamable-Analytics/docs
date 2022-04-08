@@ -48,5 +48,5 @@ Use the interface to import course data.
 This should work as long as you are added to the sandbox course 31084.
 
 # Optional Steps
-1. [Additional PyCharm Setup](dependencies.md)
+1. [Additional PyCharm Setup](pycharm-setup.md)
 2. [Checking Docker Logs](logs.md)
