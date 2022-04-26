@@ -9,10 +9,10 @@ organized teams are more likely to be assigned to the project that most of their
 
 ### Definitions
 
-*Clique* - A complete sub-graph of the overall relationship
-*Team Slot* -
-*Fragment* -
-*Available Team* - 
+*Clique* - A complete sub-graph of the overall relationship.
+*Team Slot* - A "team" to be filled, we start and finish the process with `num_teams` team slots.
+*Fragment* - A clique not big enough to be its own team without merging with other fragments.
+*Available Team* - A team that is (a) not full and (b) not locked.
 
 ### Inputs
 
@@ -21,16 +21,15 @@ permitted to specify project preferences in the survey associated with the team 
 also considered.
 
 Before the algorithm begins, the social preferences of all students are compiled into a directed graph with FRIEND and
-ENEMY edges.
+ENEMY edges. Within the [social graph](./social-graph.md), we then convert this into an undirected graph where only 
+edges of an allowed weight are present (in this case it would be Friend-Friend connections).
 
 ## Pseudocode
 
 Before the algorithm begins, we define a sequence of constants:
-`max_team_size`
-`min_team_size`
-`num_teams`
-`max_num_friends`
-`max_num_enemies`
+`max_team_size` - The upper limit for how many students can be within a single team.
+`min_team_size` - The smallest number of students a team should contain by the end of the team generation process.
+`num_teams` - The number of teams to create in total.
 
 ### Stage 1: Finding Student Cliques
 
@@ -80,11 +79,38 @@ Note that this process will also fill any empty team slots that still exist due 
 
 ### Stage 4: Place Remaining Students
 
-Stage 4 places any unassigned students into available teams. 
+Stage 4 places any unassigned students into available teams. This uses the "generate with choose" process used in both
+the Weight and Random algorithms. This means we define a choose() method that selects a team and a student, and that
+student is then added to the team. This process is repeated until there are no available teams or no remaining students.
+
+For the Social Algorithm, we choose the smallest available team and find the student most suitable to join it (as
+calculated with team_suitability_score).
 
 ### Stage 5: Assigning Projects
 
+Stage 5 only occurs if each team was given an associated project and students could have indicated preferences for these
+projects. Its goal is to keep team compositions intact, but reassign teams so they better fit with project preferences.
+
+This works as follows:
+
+1. Sort teams by best social scores (using TeamEvaluation.team_satisfaction score) first so those teams get their
+   preferred projects.
+   > The reason team satisfaction score is used here is because it is easier to compute when all the teams are created, so it was architecturally a worse option until this stage.
+2. Save team compositions as a 2D-list of students.
+3. Empty all teams
+   > In this step, it okay to empty teams that we locked in Stages 1-2, but is not okay to empty teams that were locked before the algorithm began. Those are preserved.
+4. Assign team compositions to Teams, according to project preferences (using. a modified team_suitability_score)
+   > Note that because teams are sorted, better teams will get their pick first.
+   > The modification made to team_suitability_score is that preference_utility is used instead of social utility.
+
 ## Scoring
+
+__**team_suitability_score(team, list of students)**__
+This is used many times throughout the algorithm and is calculated as:
+Sum(social utility of adding a 1 student to the team, for each student) / number of students
+
+__**Team Satisfaction**__
+See TeamEvaluation.team_satisfaction().
 
 ## Limitations
 
@@ -106,4 +132,11 @@ team [A, B, C, D, E] to exist. The algorithm never even performs the comparison 
 fragment [D, E] would fit in really well with the fragment [A, B, C].
 
 ### Time Constraints
+Although this algorithm usually runs very quickly, there are combinations of constraints that make it painfully slow.
 
+If students can choose 3 friends, implying teams of 4 people each, then in a 200-person class this means we expect
+50 (`expected_num_teams=50`) teams. If a user tries to make only 4 (`num_teams=4`) teams for example (since `num_teams`
+is significantly lower than `expected_num_teams`) then the algorithm runs extremely slowly (from seconds to minutes).
+
+Ideally we can check to identify if `expected_num_teams` >> `num_teams` then the algorithm can pre-emptively handle this
+case in a less computationally intensive way.
