@@ -9,10 +9,10 @@ organized teams are more likely to be assigned to the project that most of their
 
 ### Definitions
 
-*Clique* - A complete sub-graph of the overall relationship.
-*Team Slot* - A "team" to be filled, we start and finish the process with `num_teams` team slots.
-*Fragment* - A clique not big enough to be its own team without merging with other fragments.
-*Available Team* - A team that is (a) not full and (b) not locked.
+- *Clique* - A complete sub-graph of the overall relationship.
+- *Team Slot* - A "team" to be filled, we start and finish the process with `num_teams` team slots.
+- *Fragment* - A clique not big enough to be its own team without merging with other fragments.
+- *Available Team* - A team that is (a) not full and (b) not locked.
 
 ### Inputs
 
@@ -27,9 +27,9 @@ edges of an allowed weight are present (in this case it would be Friend-Friend c
 ## Pseudocode
 
 Before the algorithm begins, we define a sequence of constants:
-`max_team_size` - The upper limit for how many students can be within a single team.
-`min_team_size` - The smallest number of students a team should contain by the end of the team generation process.
-`num_teams` - The number of teams to create in total.
+- `max_team_size` - The upper limit for how many students can be within a single team.
+- `min_team_size` - The smallest number of students a team should contain by the end of the team generation process.
+- `num_teams` - The number of teams to create in total.
 
 ### Stage 1: Finding Student Cliques
 
@@ -62,7 +62,7 @@ are not cleaned, so that between two cliques containing overlapping members, the
 Fragments that are exactly the `min_team_size` are also locked to prevent further modification. This is done so no extra
 students are not added to organize steams of the minimum team size, either.
 
-__Clause 2.I:__ The fragments of size 1 are ignored, even if it means leaving empty team slots.
+**Clause 2.I:** The fragments of size 1 are ignored, even if it means leaving empty team slots.
 
 ### Stage 3: Merging Clique Fragments
 
@@ -75,7 +75,7 @@ Next, the algorithm aims to fill the team slots currently containing fragments. 
 4. Repeat Step 3 until the team has `min_team_size` members.
 5. Repeat Steps 1-4 until there are no longer any fragment teams.
 
-Note that this process will also fill any empty team slots that still exist due to Clause 2.I.
+Note that this process will also fill any empty team slots that still exist due to **Clause 2.I**.
 
 ### Stage 4: Place Remaining Students
 
@@ -107,7 +107,8 @@ This works as follows:
 
 __**team_suitability_score(team, list of students)**__
 This is used many times throughout the algorithm and is calculated as:
-Sum(social utility of adding a 1 student to the team, for each student) / number of students
+
+- Sum(social utility of adding a 1 student to the team, for each student) / number of students
 
 __**Team Satisfaction**__
 See TeamEvaluation.team_satisfaction().
