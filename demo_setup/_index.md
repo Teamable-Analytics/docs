@@ -121,6 +121,8 @@ student a mark. (To be extra thorough, I generated a set of normally distributed
 
 Before starting these steps, navigate to `CanvasTest` with this link: [https://ubc.test.instructure.com/](https://ubc.test.instructure.com/)
 
+After logging into `CanvasTest`, you'll need to navigate to a course that has `TA` enabled. For us, we have a course named "tfdemo" ([https://ubc.test.instructure.com/courses/31084](https://ubc.test.instructure.com/courses/31084)) that we use for demo purposes. You access `ta-verf` by clicking the "Team Formation 
+
 Run through the [Example Demo Guide](exmaple-demo-steps.md).
 
 ### Step 5: Complete demo.
