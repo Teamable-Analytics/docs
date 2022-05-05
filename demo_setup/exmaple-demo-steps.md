@@ -26,6 +26,7 @@ This is a list of steps to take to run a standard demo.
     1. Explain how surveys are created from attributes.
     2. Explain what publishing is and do it.
     3. Go to link (either the one you just published or a pre-made one) and preview quiz on Canvas.
+        > In the tfdemo (91717) course, the "Background Survey" link to Canvas is broken because the associated Canvas Quiz was deleted, so don't use this to demonstrate the previewing in Canvas functionality. With that said, the "Background Survey" currently contains random responses for all students in the course, so it should still be used when demonstrating the team generation process.
     4. Explain pulling responses.
         1. We’d have to wait for students to submit this, but we have another that’s already filled out with
            randomized data to show you the next steps.
