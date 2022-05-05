@@ -2,19 +2,19 @@
 
 ## Definitions
 
-**Canvas:**
-*The production or "real" Canvas.*
-
-**CanvasTest:**
-*The testing environment for Canvas. It contains a dump of the real Canvas database that is updated monthly.*
+**Teamable Analytics Prod:**
+*The live production build of Teamable Analytics, accessible through Canvas. We refer to this as `ta-prod`.*
 
 **Teamable Analytics Verf:**
 *The staging version of Teamable Analytics, accessible through CanvasTest. We refer to this as `ta-verf`.*
 
-**Teamable Analytics Prod:**
-*The live production build of Teamable Analytics, accessible through Canvas. We refer to this as `ta-prod`.*
-
 > Note: We denote Teamable Analytics as `TA` in further documentation
+
+**Canvas:**
+*The production or "real" Canvas.*
+
+**CanvasTest:**
+*A separate instance of Canvas. It contains a dump of the real Canvas database that is updated monthly.*
 
 ## High-level setup
 
