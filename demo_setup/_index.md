@@ -15,6 +15,7 @@
 
 **CanvasTest:**
 *A separate instance of Canvas. It contains a dump of the real Canvas database that is updated monthly.*
+*You can get there with this link - [https://ubc.test.instructure.com/](https://ubc.test.instructure.com/)*
 
 ## High-level setup
 
@@ -117,6 +118,7 @@ student a mark. (To be extra thorough, I generated a set of normally distributed
 
 ### Step 4: Test run.
 
+Before starting these steps, navigate to `CanvasTest` with this link: [https://ubc.test.instructure.com/](https://ubc.test.instructure.com/)
 Run through the [Example Demo Guide](exmaple-demo-steps.md).
 
 ### Step 5: Complete demo.
