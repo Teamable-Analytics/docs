@@ -1,6 +1,7 @@
 Files and Folders in app
 =============
 This documentation explains the file structure in relation to the major processes in the team formation project.
+
 # Top level files
 __init__.py  
 admin.py  
@@ -9,20 +10,22 @@ rules.py
 urls.py
 
 # 1. fixtures folder
-fake data make for testing  
+This folder has files that relates to the fake data made for testing purposes. Fixtures are probably not a good long term approach for testing, so we should revisit this at a later time if we want to do more serious testing.
 
 # 2. forms folder
-any form on the website (customized from the page) 
+All the forms on the website that requires any UI or logic customization.
 
 # 3. management folder
-when you want to make a terminal command, which requires system administrator access
+When you want to make a terminal command, the files are done here. All of these commands can only be run with system administrator access.
 
 # 4. migrations folder
-Danjo auto generated  
+These are migration files for the database that are auto-generated via command line DB migrations and maybe additionally manually edited.
 
 # 5. models folder
+All the database model files.
+
 # 6. tasks folder
-any asynchronous data processing tasks 
+The files in this folder pertain to any asynchronous data processing tasks needed on the site where we do not want to keep the user waiting. 
 
 # 7. team_generator folder (bowen to do)
 This folder contains all the team algorithm details.
@@ -188,13 +191,13 @@ The below files are the students' view on either types of peer evaluations (crea
 * <font color=#099>new_question.html</font> - where the user defines the question parts of an attribute 
 
 # 9. templatetags
-util functions for UI
+This folder contains all the util functions for UI (templates).
 
 # 10. tests
 unit tests  
 
 # 11. utils
-The logic functions for the website  
+This folder contains all the util functions to handle general website logic (in order to keep the models and views clean).
 
 # 12. views
 Views in Django are akin to controllers for handling what gets displayed in the templates.  
