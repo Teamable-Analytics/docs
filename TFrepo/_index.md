@@ -29,8 +29,8 @@ The files in this folder pertain to any asynchronous data processing tasks neede
 
 # 7. team_generator folder (bowen to do)
 This folder contains all the team algorithm details.
-See files (team_generator_files.md)
-See [Files](team_generator_files.md)
+
+See [files](team_generator_files.md).
 
 # 8. templates folder
 Templates in Django are views for displaying content on a webpage.
