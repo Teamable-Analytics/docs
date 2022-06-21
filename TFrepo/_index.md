@@ -2,6 +2,8 @@ Files and Folders in app
 =============
 This documentation explains the file structure in relation to the major processes in the team formation project.
 
+All the <font color=#099>__init__.py</font> in every directory allows packages to be automatically found and import.
+
 # Top level files
 __init__.py  
 admin.py  
@@ -47,13 +49,17 @@ helper subfolders will be explained where appropriate.
 See [files](templates_files.md).
 
 # 9. templatetags
-This folder contains all the util functions for UI (templates).
+This folder contains all the util functions for UI (templates).  
+
+See [files](templatetages_files.md).
 
 # 10. tests
 unit tests  
 
 # 11. utils
 This folder contains all the util functions to handle general website logic (in order to keep the models and views clean).
+
+See [files](utils_files.md).
 
 # 12. views
 Views in Django are akin to controllers for handling what gets displayed in the templates.  
