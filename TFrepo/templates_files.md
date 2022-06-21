@@ -56,13 +56,13 @@ The below files are the students' view on either types of peer evaluations (crea
 * <font color=#099>view.html</font> - where the instructor edits an existing Peer Evaluation Attribute 
 
 ## templates: admin
-* <font color=#FFC0CB>stats.html</font> 
+* <font color=#099>stats.html</font> - an interface that displays details of all projects, surveys, and team generation algorithms. Download available as Json file.
 
 ## templates: course
-* <font color=#FFC0CB>landing.html</font> 
+* <font color=#099>landing.html</font> - the help/how does it work page. List steps to help the instructor set up.
 * <font color=#099>list.html</font> - list of courses are that the user has
   access to on Canvas
-* <font color=#FFC0CB>wait_for_import.html</font> 
+* <font color=#099>wait_for_import.html</font> - redirects the user after importing students and groups
 
 ## templates: canvas
 * <font color=#099>blacklist.html</font> - displays a dropdown list of students for the friends/enemies question
@@ -72,32 +72,36 @@ The below files are the students' view on either types of peer evaluations (crea
 
 ## templates: global
 ### templates: global: partial
-* <font color=#FFC0CB>menu.html</font>
-* <font color=#099>nav.html</font>
-* <font color=#099>onboard.html</font>
-* <font color=#099>step_details.html</font>
-* <font color=#099>student_menu.html</font>
-* <font color=#099>wait_for_task.html</font>
+* <font color=#099>menu.html</font> - the nav-bar used in all pages in the instructors' view, which includes sections, students, attributes, projects, surveys, teams, peer evaluations
+* <font color=#099>nav.html</font> - template of another nav-bar. Used to display the current location within sections, students, attributes, projects, surveys, teams, or peer evaluations
+* <font color=#099>onboard.html</font> - display which step an instructor is on in the setup if there are steps to be completed
+* <font color=#099>step_details.html</font> - the template for the collapsible step info
+* <font color=#099>student_menu.html</font> - the nav-bar used in all pages in the students' view, which includes course, peer evaluations
+* <font color=#099>wait_for_task.html</font> - template to display the loading status
 #### templates: global: partial: nav_partials
-* <font color=#FFC0CB>admin.html</font>
-* <font color=#099>attributes.html</font>
-* <font color=#099>peer_eval.html</font>
-* <font color=#099>project.html</font>
-* <font color=#099>sections.html</font>
-* <font color=#099>student_view.html</font>
-* <font color=#099>student.html</font>
-* <font color=#099>surveys.html</font>
-* <font color=#099>teams.html</font>
+Each of the file below lists hyperlinks/locations in a specific page. All of which are used by the templates: global: partial: nav.html template
+* <font color=#099>admin.html</font> - list of all hyperlinks/locations within the admin page.
+* <font color=#099>attributes.html</font> - list of all hyperlinks/locations within the attribute page.
+* <font color=#099>peer_eval.html</font> - list of all hyperlinks/locations within the peer evaluation page.
+* <font color=#099>project.html</font> - list of all hyperlinks/locations within the project page.
+* <font color=#099>sections.html</font> - list of all hyperlinks/locations within the sections page.
+* <font color=#099>student_view.html</font> - list of all hyperlinks/locations within the pages that students can see.
+* <font color=#099>student.html</font> - list of all hyperlinks/locations within the student page.
+* <font color=#099>surveys.html</font> - list of all hyperlinks/locations within the surveys page.
+* <font color=#099>teams.html</font> - list of all hyperlinks/locations within the teams page.
 
 
 ## templates: student_view
-* <font color=#FFC0CB>complete_peer_eval.html</font>
-* <font color=#099>select_peer_eval.html</font>
-* <font color=#099>select_peer_target.html</font>
-* <font color=#099>student_result.html</font>
+The pages below are within Peer Evaluation designed for students.
+* <font color=#099>complete_peer_eval.html</font> - template of the peer evaluation survey to answer for each team member
+* <font color=#099>select_peer_eval.html</font> - list of all peer evaluations to-do.
+* <font color=#099>select_peer_target.html</font> - list of all team members in a selected peer evaluation. (Action > complete)
+* <font color=#099>student_result.html</font> - displays the feedback from team members of a selected peer evaluation. (Action > view my results)
+
 ## templates: partial
-* <font color=#FFC0CB>pagination.html</font>
+* <font color=#099>pagination.html</font> - list previous, next, and number of pages of results
 * <font color=#099>sections.html</font> - lists all sections together or each of the defined sections individually in the course
+
 ## templates: question
 * <font color=#099>new_answer_group.html</font> - the partial for defining a new answer group embedded under <font color=#099>new_question.html</font>
 * <font color=#099>new_question.html</font> - where the user defines the question parts of an attribute 
