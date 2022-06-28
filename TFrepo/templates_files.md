@@ -1,3 +1,5 @@
+# 8. templates folder
+
 ## templates: sections
 * <font color=#099>landing.html</font> - basic functions & allows to import data if data does not exist yet
 * <font color=#099>section.html</font> - show the list of sections of the course (e.g. lab sections)
