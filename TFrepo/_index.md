@@ -27,7 +27,9 @@ These are migration files for the database that are auto-generated via command l
 All the database model files.
 
 # 6. tasks folder
-The files in this folder pertain to any asynchronous data processing tasks needed on the site where we do not want to keep the user waiting. 
+The files in this folder pertain to any asynchronous data processing tasks needed on the site where we do not want to keep the user waiting.  
+
+See [files](tasks_files.md).
 
 # 7. team_generator folder (bowen to do)
 This folder contains all the team algorithm details.
