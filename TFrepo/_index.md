@@ -17,6 +17,8 @@ This folder has files that relates to the fake data made for testing purposes. F
 # 2. forms folder
 All the forms on the website that requires any UI or logic customization.
 
+See [files](forms_files.md).
+
 # 3. management folder
 When you want to make a terminal command, the files are done here. All of these commands can only be run with system administrator access.
 
