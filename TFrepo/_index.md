@@ -17,6 +17,8 @@ This folder has files that relates to the fake data made for testing purposes. F
 # 2. forms folder
 All the forms on the website that requires any UI or logic customization.
 
+See [files](forms_files.md).
+
 # 3. management folder
 When you want to make a terminal command, the files are done here. All of these commands can only be run with system administrator access.
 
@@ -27,7 +29,9 @@ These are migration files for the database that are auto-generated via command l
 All the database model files.
 
 # 6. tasks folder
-The files in this folder pertain to any asynchronous data processing tasks needed on the site where we do not want to keep the user waiting. 
+The files in this folder pertain to any asynchronous data processing tasks needed on the site where we do not want to keep the user waiting.  
+
+See [files](tasks_files.md).
 
 # 7. team_generator folder (bowen to do)
 This folder contains all the team algorithm details.
